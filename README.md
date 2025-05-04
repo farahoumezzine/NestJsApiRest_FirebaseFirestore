@@ -96,3 +96,29 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+
+# API NestJS + Firebase Firestore
+
+## Description
+Une API REST développée avec NestJS, utilisant Firebase Firestore pour gérer des utilisateurs.
+
+## Prérequis
+- Node.js (version 18.x ou supérieure)
+- Compte Firebase avec Firestore activé
+- Fichier de clés de service Firebase (`firebase-service-account.json`)
+
+## Installation
+1. Cloner le dépôt : `git clone https://github.com/farahoumezzine/NestJsApiRest_FirebaseFirestore.git`
+2. Installer les dépendances : `npm install`
+3. Placer `firebase-service-account.json` à la racine du projet.
+4. Définir la variable d'environnement :
+   - Windows : `$env:GOOGLE_APPLICATION_CREDENTIALS = "./firebase-service-account.json"`
+5. Lancer l'application : `npm run start:dev`
+
+## Endpoints
+- POST /users : Créer un utilisateur
+  Exemple : `curl -X POST http://localhost:3000/users -H "Content-Type: application/json" -d '{"name":"Jean Dupont","email":"jean.dupont@example.com"}'`
+- GET /users : Lister tous les utilisateurs
+  Exemple : `curl http://localhost:3000/users`
